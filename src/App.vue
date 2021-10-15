@@ -20,7 +20,7 @@
                   </div>
                   <h4>{{text}}</h4>
                   <div>
-                    <PeopleInOutComponent :entry_times="entry_times" />
+                    <EntryTimeComponent :entry_times="entry_times" />
                   </div>
                 </div>
               </div>
@@ -36,7 +36,7 @@
 <script>
 import ButtonComponent from './components/ButtonComponent'
 import TitleComponent from './components/TitleComponent'
-import PeopleInOutComponent from './components/PeopleInOutComponent'
+import EntryTimeComponent from './components/EntryTimeComponent'
 export default {
   name: 'App',
   data () {
@@ -52,12 +52,12 @@ export default {
   components: {
     ButtonComponent,
     TitleComponent,
-    PeopleInOutComponent
+    EntryTimeComponent
   },
   methods: {
     increment () {
       if (this.count === 20) {
-        this.error_message = 'Number of people exceeds 20'
+        this.error_message = "Number of people can't exceeds 20"
         return
       } else {
         this.error_message = ''
